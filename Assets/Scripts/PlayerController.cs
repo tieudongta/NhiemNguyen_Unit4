@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         float forwardInput = Input.GetAxis("Vertical");
         float magnitude = forwardInput * speed * Time.deltaTime;
-        rbPlayer.AddForce(focalPoint.transform.forward * magnitude, ForceMode.Impulse);
+        rbPlayer.AddForce(focalPoint.transform.forward * magnitude, ForceMode.Force);
         if (forwardInput > 0)
         {
             rdPlayer.material.color = new Color(1.0f - forwardInput, 1.0f, 1.0f - forwardInput);
